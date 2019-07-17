@@ -10,5 +10,8 @@ else
     elseif mode_code==3
         tend=tend*10*(2+mode_code);%500
     end
+    if step > 0.01
+        step=0.01;%控制步长，防止步长过小
+    end
     LE_detailed=get_ly(step,tend,initial_value);
 end
