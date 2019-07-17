@@ -1,32 +1,32 @@
 % function chaotic_system_test
-%% ÉùÃ÷³õÊ¼ĞÅÏ¢
+%% å£°æ˜åˆå§‹ä¿¡æ¯
 root_path='D:\chaotic\';
-%% ÏÈËæ»úÉú²úÏµÍ³
-global W;% 3ĞĞ9ÁĞ,Ö»ÓĞ0»ò1
-global K;% 3ĞĞ9ÁĞ
+%% å…ˆéšæœºç”Ÿäº§ç³»ç»Ÿ
+global W;% 3è¡Œ9åˆ—,åªæœ‰0æˆ–1
+global K;% 3è¡Œ9åˆ—
 load example_data.mat W K;
-%% Éú³É³õÊ¼Öµ£¬²¢½øĞĞÅĞ¶Ï
+%% ç”Ÿæˆåˆå§‹å€¼ï¼Œå¹¶è¿›è¡Œåˆ¤æ–­
 [temp_x,temp_y,temp_z]=get_initial_value;
 initial_value=[temp_x,temp_y,temp_z]
-%% Â·¾¶¿ØÖÆ
+%% è·¯å¾„æ§åˆ¶
 filename_number=1;
 output_path=[root_path,'system_',num2str(filename_number),'\'];
 mkdir(output_path);
-%% ¸ù¾İ³õÖµ¼ÆËãLE£¬²¢±£´æ½á¹û
+%% æ ¹æ®åˆå€¼è®¡ç®—LEï¼Œå¹¶ä¿å­˜ç»“æœ
 step=0.01;
 tend=10;
 tspan_max=200;  
-LE_rough=get_ly(step,tend,initial_value);%ÏÈ½øĞĞ´Ö¾­¶È¼ÆËã
-mode_code=check_ly(LE_rough);%¼ÆËãÔÙ´Î¼ÆËãµÄ¾«¶È
-LE_detailed=reget_ly(step,tend,initial_value,mode_code);%¼ÆËã¾«¶È¸ü¸ßµÄÊı¾İ
-chaotic_sign=check_chaotic(LE_detailed);%ÅĞ¶ÏÊ±ºòÊÇ»ìãçÏµÍ³
+LE_rough=get_ly(step,tend,initial_value);%å…ˆè¿›è¡Œç²—ç»åº¦è®¡ç®—
+mode_code=check_ly(LE_rough);%è®¡ç®—å†æ¬¡è®¡ç®—çš„ç²¾åº¦
+LE_detailed=reget_ly(step,tend,initial_value,mode_code);%è®¡ç®—ç²¾åº¦æ›´é«˜çš„æ•°æ®
+chaotic_sign=check_chaotic(LE_detailed);%åˆ¤æ–­æ—¶å€™æ˜¯æ··æ²Œç³»ç»Ÿ
 if chaotic_sign==1
-    %% Èç¹ûÊÇ»ìãç£¬¾Í»æÖÆÏàÍ¼µ÷ÓÃsave_phase_figure,²¢±£´æÏµÍ³ĞÅÏ¢
+    %% å¦‚æœæ˜¯æ··æ²Œï¼Œå°±ç»˜åˆ¶ç›¸å›¾è°ƒç”¨save_phase_figure,å¹¶ä¿å­˜ç³»ç»Ÿä¿¡æ¯
     save_ly(LE_detailed,output_path);
     [phase_t, phase_value]=get_phase(initial_value,tspan_max);
     save_phase(phase_t,phase_value,output_path);
 else
-    %% ´¦Àí·Ç»ìãçµÄÇé¿ö
+    %% å¤„ç†éæ··æ²Œçš„æƒ…å†µ
     disp('this way out')
 end
 
