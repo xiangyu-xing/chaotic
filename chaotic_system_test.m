@@ -1,4 +1,5 @@
 % function result=chaotic_system_test(filename_num)
+% 修改编码方式
 %% 声明初始信息
 root_path='D:\chaotic\';
 %% 先随机生产系统

@@ -1,6 +1,6 @@
 function LE_detailed=reget_ly(step,tend,initial_value,mode_code)
-%% ¸ù¾İmode_codeÅĞ¶Ï½øĞĞµÄ¼ÆËãµÄ¾«¶ÈÊÇ¶àÉÙ
-if mode_code==0%% ÕıÔÚÇé¿öÏÂ²»ĞèÒª½øĞĞ¼ÆËãÁË
+%% æ ¹æ®mode_codeåˆ¤æ–­è¿›è¡Œçš„è®¡ç®—çš„ç²¾åº¦æ˜¯å¤šå°‘
+if mode_code==0%% æ­£åœ¨æƒ…å†µä¸‹ä¸éœ€è¦è¿›è¡Œè®¡ç®—äº†
     LE_detailed=[nan,nan,nan,nan];
 else
     if mode_code==1
@@ -11,7 +11,7 @@ else
         tend=tend*10*(2+mode_code);%500
     end
     if step > 0.01
-        step=0.01;%¿ØÖÆ²½³¤£¬·ÀÖ¹²½³¤¹ıĞ¡
+        step=0.01;%æ§åˆ¶æ­¥é•¿ï¼Œé˜²æ­¢æ­¥é•¿è¿‡å°
     end
     LE_detailed=get_ly(step,tend,initial_value);
 end

@@ -7,7 +7,7 @@ step=1/0.001;
 num=floor(m/step);
 trend_code_array=zeros(3,num-1);
 for i=1:num-1
-    %»ñÈ¡Ã¿¸öÏàÍ¼µÄÇ÷ÊÆ¡£
+    %è·å–æ¯ä¸ªç›¸å›¾çš„è¶‹åŠ¿ã€‚
     x1=x(i+1);x0=x(i);
     y1=y(i+1);y0=y(i);
     z1=z(i+1);z0=z(i);

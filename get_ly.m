@@ -1,6 +1,6 @@
 function LE=get_ly(step, tend,initial_value)
-%% �����쳣��׽��ode45���ܻ���ֶ��ִ���ȫ����׽Ϊͬһ�������������
-% ��ϸ�Ĵ������̣���Ϊ������ȥ�Ŀ����Բ���
+%% 进行异常捕捉，ode45可能会出现多种错误，全部捕捉为同一种情况，不进行
+% 详细的处理过程，因为处理回去的可能性不大
 try
     [~,Res]=lyapunov(3,@jaco,@ode45,0,step,tend,initial_value,0);
     LE=[Res(end,1),...
