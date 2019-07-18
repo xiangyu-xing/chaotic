@@ -1,5 +1,5 @@
 function [Texp,Lexp]=lyapunov(n,rhs_ext_fcn,fcn_integrator,tstart,stept,tend,ystart,ioutp)
-%% 常微分方程系统lyapunov指数计算
+%% 甯稿井鍒嗘柟绋嬬郴缁焞yapunov鎸囨暟璁＄畻
 % n=number of nonlinear odes 
 % n2=n*(n+1)=total number of odes
 n1=n;

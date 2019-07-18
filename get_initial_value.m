@@ -1,6 +1,6 @@
 function [x,y,z]= get_initial_value
-%% �������ɻ���ϵͳ�ĳ�ʼֵ
-% ��ֵ�����ɿ϶���ֹ��һ������
+%% 用于生成混沌系统的初始值
+% 初值的生成肯定不止这一个条件
 global W;
 global K;
 while(1)

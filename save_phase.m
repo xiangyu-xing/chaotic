@@ -1,15 +1,15 @@
 function save_phase(t,y,output_path)
-% ±¾º¯ÊıµÄÓÃÍ¾ÊÇ°ÑÏµÍ³·½³ÌµÄÍ¼ÏñºÍÊıÖµ´æ´¢ÆğÀ´
-% µÚÒ»¸ö²ÎÊı¡¢µÚ¶ş¸ö²ÎÊıget_phaseµÄ½á¹û
-% µÚÈı¸ö²ÎÊıÎªÊä³öÎÄ¼şÂ·¾¶
+% æœ¬å‡½æ•°çš„ç”¨é€”æ˜¯æŠŠç³»ç»Ÿæ–¹ç¨‹çš„å›¾åƒå’Œæ•°å€¼å­˜å‚¨èµ·æ¥
+% ç¬¬ä¸€ä¸ªå‚æ•°ã€ç¬¬äºŒä¸ªå‚æ•°get_phaseçš„ç»“æœ
+% ç¬¬ä¸‰ä¸ªå‚æ•°ä¸ºè¾“å‡ºæ–‡ä»¶è·¯å¾„
 % output_path='D:\system_1\
-%% ±£´æÏµÍ³²ÎÊıºÍÏàÍ¼Êı¾İ
+%% ä¿å­˜ç³»ç»Ÿå‚æ•°å’Œç›¸å›¾æ•°æ®
 output_data_filename=[output_path,'pashe_data.mat'];
 pashe_data_x=y(:,1);
 pashe_data_y=y(:,2);
 pashe_data_z=y(:,3);
 save(output_data_filename,'t','pashe_data_x','pashe_data_y','pashe_data_z');
-%% ±£´æÏàÍ¼
+%% ä¿å­˜ç›¸å›¾
 h_figure=figure(1);
 filename=[output_path,'figure_xyz'];
 h_xyz=plot3(pashe_data_x,pashe_data_y,pashe_data_z);

@@ -1,6 +1,9 @@
-# Prerequisites
-*.d
+*.csv
+*.txt
+*.xlsx
+*.xls
 *.mat
 *.fig
 *.bmp
 *.docx
+*.asv
