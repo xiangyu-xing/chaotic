@@ -7,7 +7,7 @@ global K;% 3行9列
 load example_data.mat W K;
 %% 生成初始值，并进行判断
 [temp_x,temp_y,temp_z]=get_initial_value;
-initial_value=[temp_x,temp_y,temp_z]
+initial_value=[temp_x,temp_y,temp_z];
 %% 路径控制
 filename_number=1;
 output_path=[root_path,'system_',num2str(filename_number),'\'];
